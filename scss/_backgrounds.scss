@@ -1,0 +1,12 @@
+// фикс прокрутки при переключении графиков со статистикой
+// у графиков соотношение высота/ширина = 1/2, поэтому 50%
+.chart-dummy-wrap {
+	padding-top: 50%;
+	position: relative;
+	.chart-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+}

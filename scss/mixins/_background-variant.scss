@@ -1,0 +1,49 @@
+// stylelint-disable declaration-no-important
+
+// Contextual backgrounds
+
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+  a#{$parent},
+  button#{$parent} {
+    @include hover-focus {
+      background-color: darken($color, 10%) !important;
+    }
+  }
+}
+
+@mixin bg-gradient-variant($parent, $color) {
+  #{$parent} {
+    background: $color linear-gradient(115deg, $color, darken($color, 15%)) repeat-x !important;
+    position: relative;
+    overflow: hidden;
+  }
+}
+.bg-decor {
+  &:before {
+    content: '';
+    position: absolute;
+    width: 621px;
+    height: 724px;
+    background-image: url(../img/bg-decor.png);
+    background-position: right bottom;
+    bottom: calc(100% - 281px);
+    right: calc(100% - 208px);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 621px;
+    height: 724px;
+    background-image: url(../img/bg-decor.png);
+    background-position: right bottom;
+    top: calc(100% - 405px);
+    left: calc(100% - 367px);
+  }
+  > * {
+    position: relative;
+    z-index: 3;
+  }
+}

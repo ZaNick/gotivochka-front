@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Shvidka Index</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-datepicker3.min.css">
+	<link rel="stylesheet" href="./css/type.css">
+	<link rel="stylesheet" href="./css/menu.css">
+	<link rel="stylesheet" href="./css/dashboard.css">
+	<link rel="stylesheet" href="./css/icons.css">
+	<link rel="stylesheet" href="./css/forms.css">
+	<link rel="stylesheet" href="./css/newcredit.css"> -->
+</head>
+
+<body>
+	<div class="navigation">
+		<div class="logo-wrap">
+			<img src="./img/logo.svg" class="img-fluid" alt="">
+		</div>
+
+		<div class="menu">
+			<button id="btnMenu" class="btn-menu-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="menu-collapsed">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-chart-bar"></i>
+							</span>
+							<span class="menu-name">Статистика</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-inbox"></i>
+								<span class="badge badge-pill badge-light badge-menu">999</span>
+							</span>
+							<span class="menu-name" data-toggle="collapse" data-target="#collapseExample">Заявки
+								<span class="dropdown-toggle"></span>
+							</span>
+						</a>
+						<div class="collapse" id="collapseExample">
+							<ul class="sub-menu-list">
+								<li>
+									<a href="#">Список заявок</a>
+								</li>
+								<li>
+									<a href="#">Взять заявку</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-handshake"></i>
+							</span>
+							<span class="menu-name">Займы</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-credit-card"></i>
+							</span>
+							<span class="menu-name">Платежи</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-portrait"></i>
+							</span>
+							<span class="menu-name">Черный список</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-chart-pie"></i>
+							</span>
+							<span class="menu-name">Отчеты</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-briefcase"></i>
+							</span>
+							<span class="menu-name">Аудит</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-cog-1"></i>
+							</span>
+							<span class="menu-name">Управление</span>
+						</a>
+					</li>
+				</ul>
+	
+				<ul class="nav flex-column nav-bot">
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-info"></i>
+							</span>
+							<span class="menu-name">
+								<i class="icon icon-arrL"></i> На сайт</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="page-header">
+			<div class="header-info-wrap d-none d-lg-flex">
+				<div class="header-info-number show-second">
+					<span class="show-data">30</span>
+				</div>
+				<div class="header-info-text">
+					<div>Февраля</div>
+					<div class="text-pink">Четверг</div>
+				</div>
+			</div>
+
+			<div class="top-user-wrap">
+				<a href="#" class="user-pic-wrap" id="dropdownUserMenuButton">
+					<img src="./img/user.png" class="img-fluid rounded-circle" alt="">
+				</a>
+				<div id="dropdownUserMenu" class="d-none">
+					<div class="popover-header">
+						<div class="user-name">Дмитрий Вознесенский</div>
+						<div class="user-status">
+							<span class="indicator online"></span> Онлайн
+							<!-- <span class="indicator offline"></span> Оффлайн
+							<span class="indicator away"></span> Нет на месте
+							<span class="indicator dontdisturb"></span> Не беспокоить -->
+						</div>
+					</div>
+					<div class="popover-body">
+						<ul class="user-menu-nav">
+							<li><a href="#"><i class="icon icon-user"></i> Аккаунт</a></li>
+							<li><a href="#"><i class="icon icon icon-cog-1"></i> Настройки</a></li>
+							<li><a href="#"><i class="icon icon-power-off"></i> Выйти</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="login-wrap">
+					<div class="user-name">Дмитрий Вознесенский</div>
+					<a href="#" class="logout-link">Выйти</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-wrap">
+		<div class="bg-gradient-primary bg-decor">
+			<section id="dashboard" class="dashboard">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="dashboard-header">
+								<div id="statSlider" class="row-stat">
+									<div class="col-stat">
+										<div class="stat-title">
+											<i class="icon icon-chart-pie-1"></i> Заявки
+										</div>
+										<div class="stat-card card">
+											<!--Карточка-->
+											<div class="d-flex">
+												<div class="stat-entity">
+													<div class="stat-number">
+														36
+													</div>
+													<div class="badge badge-outline-secondary">
+														Сегодня
+													</div>
+												</div>
+	
+												<div class="stat-entity">
+													<div class="stat-number">
+														2019
+													</div>
+													<div class="badge badge-outline-secondary">
+														Всего
+													</div>
+												</div>
+											</div>
+	
+											<div class="stat-description">
+												Общее количество рассмотренных заявок
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-stat">
+										<div class="stat-title">
+											<i class="icon icon-balance-scale"></i> Норма
+										</div>
+										<div class="stat-card card">
+											<!--Карточка-->
+											<div class="d-flex">
+												<div class="stat-entity">
+													<div class="stat-number">
+														31
+														<sup>%</sup>
+													</div>
+													<div class="badge badge-outline-secondary">
+														Сегодня
+													</div>
+												</div>
+	
+												<div class="stat-entity">
+													<div class="stat-number">
+														76
+														<sup>%</sup>
+													</div>
+													<div class="badge badge-outline-secondary">
+														Всего
+													</div>
+												</div>
+											</div>
+	
+											<div class="stat-description">
+												Норма пропуска (%) - отношение выданных к числу рассмотренных
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-stat">
+										<div class="stat-title">
+											<i class="icon icon-clock"></i> Время
+										</div>
+										<div class="stat-card card">
+											<!--Карточка-->
+											<div class="d-flex">
+												<div class="stat-entity">
+													<div class="stat-number">
+														12
+														<sup>м</sup>
+													</div>
+													<div class="badge badge-outline-secondary">
+														Сегодня
+													</div>
+												</div>
+	
+												<div class="stat-entity">
+													<div class="stat-number">
+														09
+														<sup>м</sup>
+													</div>
+													<div class="badge badge-outline-secondary">
+														Всего
+													</div>
+												</div>
+											</div>
+	
+											<div class="stat-description">
+												Общее количество рассмотренных заявок
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<div class="row-stat">
+									<div class="col">
+										<a href="#" class="btn btn-lg btn-sm-block btn-outline-light btn-icon icon-list-alt">Список заявок</a>
+										<a href="#" class="btn btn-lg btn-sm-block btn-outline-light btn-icon icon-street-view">Взять заявку</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-12">
+					<h1>Количество рассмотренных заявок</h1>
+					<ul class="nav nav-pills nav-pills-custom mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="daily-stats-tab" data-toggle="pill" href="#daily-stats" role="tab" aria-controls="daily-stats"
+							    aria-selected="true">По дням</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="monthly-stat-tab" data-toggle="pill" href="#monthly-stat" role="tab" aria-controls="monthly-stat"
+							    aria-selected="false">По месяцам</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="daily-stats" role="tabpanel" aria-labelledby="daily-stats-tab">
+							<div class="chart-dummy-wrap">
+								<div class="chart-wrap">
+									<canvas id="daily"></canvas>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="monthly-stat" role="tabpanel" aria-labelledby="monthly-stat-tab">
+							<div class="chart-dummy-wrap">
+								<div class="chart-wrap">
+									<canvas id="monthly"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-auto">
+					<div class="text-secondary">Швидка Готівочка © 2018</div>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="text-secondary">
+						<i class="icon-envelope"></i> Обратная связь</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/bootstrap-datepicker.min.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+	<script src="./js/js.js"></script>
+
+	<script src="./js/Chart.min.js"></script>
+	<script>
+		window.onload = function () {
+			var canvasDaily = document.getElementById("daily");
+			var canvasMonthly = document.getElementById("monthly");
+
+			new Chart(canvasDaily, dailyOptions);
+			new Chart(canvasMonthly, monthlyOptions);
+		};
+		
+		var monthlyData = {
+			labels: ["Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь", "Январь", "Февраль"],
+			datasets: [{
+				data: [700, 470, 780, 1010, 560, 480, 380, 970, 200],
+				lineTension: 0.4,
+				defaultColor: '#000',
+				backgroundColor: 'rgba(255, 215, 0, 0.2)',
+				borderColor: '#ffde2f',
+				borderWidth: 2,
+				pointRadius: 4.5,
+				pointHoverRadius: 4.5,
+				pointBackgroundColor: '#ffde2f'
+			}]
+		};
+		var monthlyOptions = {
+			type: 'line',
+			data: monthlyData,
+			options: {
+				scales: {
+					xAxes: [{
+						display: true,
+						ticks: {
+							fontColor: '#000',
+							fontFamily: "'Open Sans', sans-serif"
+						}
+					}],
+					yAxes: [{
+						display: true,
+						ticks: {
+							stepSize: 500,
+							fontColor: '#000',
+							fontFamily: "'Open Sans', sans-serif"
+						}
+					}]
+				},
+				legend: {
+					display: false,
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+					enabled: true,
+					position: 'nearest'
+				},
+				animation: {
+					duration: 0,
+				}
+			}
+		};
+		var dailyData = {
+			labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"],
+			datasets: [{
+				data: [700, 470, 780, 1010, 560, 480, 380, 970, 200, 700, 470, 780, 1010, 560, 480, 380, 970, 200, 700, 470, 780, 1010, 560, 480, 380, 970, 200, 380, 970, 200],
+				lineTension: 0.4,
+				defaultColor: '#000',
+				backgroundColor: 'rgba(255, 215, 0, 0.2)',
+				borderColor: '#ffde2f',
+				borderWidth: 2,
+				pointRadius: 4.5,
+				pointHoverRadius: 4.5,
+				pointBackgroundColor: '#ffde2f'
+			}]
+		};
+		var dailyOptions = {
+			type: 'line',
+			data: dailyData,
+			options: {
+				scales: {
+					xAxes: [{
+						display: true,
+						ticks: {
+							fontColor: '#000',
+							fontFamily: "'Open Sans', sans-serif"
+						}
+					}],
+					yAxes: [{
+						display: true,
+						ticks: {
+							stepSize: 500,
+							fontColor: '#000',
+							fontFamily: "'Open Sans', sans-serif"
+						}
+					}]
+				},
+				legend: {
+					display: false,
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+					enabled: true,
+					position: 'nearest'
+				},
+				animation: {
+					duration: 0,
+				}
+			}
+		};
+	</script>
+</body>
+
+</html>

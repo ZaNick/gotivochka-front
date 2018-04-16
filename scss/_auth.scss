@@ -1,0 +1,13 @@
+.auth-wrap {
+	width: calc(100% - 30px);
+	min-height: calc(100vh - 80px); // - footer
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.auth-footer {
+	background-color: $dark;
+	padding: 20px;
+	text-align: center;
+}

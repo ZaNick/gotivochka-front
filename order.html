@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Shvidka Order</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="navigation small-navbar">
+		<div class="logo-wrap">
+			<img src="./img/logo.svg" class="img-fluid" alt="">
+		</div>
+
+		<div class="menu">
+			<button id="btnMenu" class="btn-menu-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="menu-collapsed">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-chart-bar"></i>
+							</span>
+							<span class="menu-name">Статистика</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-inbox"></i>
+								<span class="badge badge-pill badge-light badge-menu">999</span>
+							</span>
+							<span class="menu-name" data-toggle="collapse" data-target="#collapseExample">Заявки
+								<span class="dropdown-toggle"></span>
+							</span>
+						</a>
+						<div class="collapse" id="collapseExample">
+							<ul class="sub-menu-list">
+								<li>
+									<a href="#">Список заявок</a>
+								</li>
+								<li>
+									<a href="#">Взять заявку</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-handshake"></i>
+							</span>
+							<span class="menu-name">Займы</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-credit-card"></i>
+							</span>
+							<span class="menu-name">Платежи</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-portrait"></i>
+							</span>
+							<span class="menu-name">Черный список</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-chart-pie"></i>
+							</span>
+							<span class="menu-name">Отчеты</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-briefcase"></i>
+							</span>
+							<span class="menu-name">Аудит</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-cog-1"></i>
+							</span>
+							<span class="menu-name">Управление</span>
+						</a>
+					</li>
+				</ul>
+	
+				<ul class="nav flex-column nav-bot">
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-info"></i>
+							</span>
+							<span class="menu-name">
+								<i class="icon icon-arrL"></i> На сайт</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="page-header">
+			<div class="header-info-wrap d-none d-lg-flex">
+				<div class="header-info-number show-second">
+					<span class="show-data">30</span>
+				</div>
+				<div class="header-info-text">
+					<div>Февраля</div>
+					<div class="text-pink">Четверг</div>
+				</div>
+			</div>
+
+			<div class="top-user-wrap">
+				<a href="#" class="user-pic-wrap" id="dropdownUserMenuButton">
+					<img src="./img/user.png" class="img-fluid rounded-circle" alt="">
+				</a>
+				<div id="dropdownUserMenu" class="d-none">
+					<div class="popover-header">
+						<div class="user-name">Дмитрий Вознесенский</div>
+						<div class="user-status">
+							<span class="indicator online"></span> Онлайн
+							<!-- <span class="indicator offline"></span> Оффлайн
+							<span class="indicator away"></span> Нет на месте
+							<span class="indicator dontdisturb"></span> Не беспокоить -->
+						</div>
+					</div>
+					<div class="popover-body">
+						<ul class="user-menu-nav">
+							<li><a href="#"><i class="icon icon-user"></i> Аккаунт</a></li>
+							<li><a href="#"><i class="icon icon icon-cog-1"></i> Настройки</a></li>
+							<li><a href="#"><i class="icon icon-power-off"></i> Выйти</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="login-wrap">
+					<div class="user-name">Дмитрий Вознесенский</div>
+					<a href="#" class="logout-link">Выйти</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-wrap" ng-app="order" ng-controller="mainCtrl">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-3">
+					<h1 class="text-left">
+						Заявка №1234567
+						<div class="order-status">Рассматривается верификатором</div>
+					</h1>
+				</div>
+				<div class="col-xl-9 mb-4 text-xl-right">
+					<button class="btn btn-icon icon-edit btn-primary btn-sm-block">Изменить срок</button>
+					<button class="btn btn-icon icon-check btn-primary btn-sm-block">Одобрить</button>
+					<button class="btn btn-icon icon-times btn-primary btn-sm-block">Отказать</button>
+					<button class="btn btn-icon icon-undo btn-primary btn-sm-block">Вернуть в пул</button>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="collapse-wrap">
+						<div class="px-3 bg-light btn-collapse" data-toggle="collapse" data-target="#generalInformation" aria-expanded="true">
+							&nbsp;
+						</div>
+
+						<div class="order-collapse collapse show" id="generalInformation">
+							<div class="row pb-3">
+								<div class="col-lg-4">
+									<div class="col-gen-info">
+										<div class="gen-info-name">Кредитный продукт</div>
+										<div class="gen-info-value">Продукт №2</div>
+									</div>
+									<div class="col-gen-info">
+										<div class="gen-info-name">Тип выдачи</div>
+										<div class="gen-info-value">Перевод на карту</div>
+									</div>
+									<div class="col-gen-info">
+										<div class="gen-info-name">Дата подачи заявки</div>
+										<div class="gen-info-value">11.02.2018</div>
+									</div>
+								</div>
+	
+								<div class="col-lg-3">
+									<div class="col-gen-info">
+										<div class="gen-info-name">Сумма, грн</div>
+										<div class="gen-info-value">240 000</div>
+									</div>
+									<div class="col-gen-info">
+										<div class="gen-info-name">Срок</div>
+										<div class="gen-info-value">150 дней</div>
+									</div>
+									<div class="col-gen-info">
+										<div class="gen-info-name">Дата возврата</div>
+										<div class="gen-info-value">19.06.2018</div>
+									</div>
+								</div>
+								<div class="col-lg-5">
+									<div class="col-gen-info">
+										<div class="gen-info-name">Цель займа</div>
+										<div class="gen-info-value">Покупка автомобиля</div>
+									</div>
+									<div class="col-gen-info">
+										<div class="gen-info-name">Комментарий менеджера</div>
+										<div class="gen-info-value">Пришел сам, выглядит опрятно, деньги нужны на лечение.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="col-12">
+					<h6>О заемщике</h6>
+					<div class="collapse-wrap">
+						<div class="px-3 bg-light btn-collapse collapsed" data-toggle="collapse" data-target="#aboutBorrower">
+							&nbsp;
+						</div>
+
+						<div class="collapse order-collapse bg-light pb-4" id="aboutBorrower">
+							<div class="row">
+								<div class="col-lg-4 col-borrower-left">
+									<input type="file" name="" id="addPhoto" class="custom-control-input">
+									<label id="addPhoto" for="addPhoto" class="add-photo-box">
+										<div class="add-photo-icon">
+											<i class="icon icon-user-plus"></i>
+										</div>
+										<span>Добавить фото</span>
+									</label>
+	
+									<table class="table borderless table-sm">
+										<tbody>
+											<tr>
+												<th>ФИО заемщика</th>
+												<td class="edit-content-cell">
+													Григорьев Сергей Викторович
+													<!-- попап для редактирования полей -->
+													<span class="edit-field-btn" tabindex="0" data-toggle="popover" data-placement="top" data-popover-content="#edit-field-1">
+														<i class="icon icon-pen-square"></i>
+													</span>
+													<div id="edit-field-1" style="display:none;">
+														<div class="popover-heading">Редактировать ФИО заемщика</div>
+														<div class="popover-body">
+															<div class="input-group mb-3">
+																<input type="text" class="form-control" value="Григорьев Сергей Викторович">
+																<div class="input-group-append">
+																	<button class="btn btn-outline-success" type="button">ОК</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- end попап для редактирования полей -->
+												</td>
+											</tr>
+											<tr>
+												<th>ИНН</th>
+												<td>
+													11111111
+												</td>
+											</tr>
+											<tr>
+												<th>Дата рождения</th>
+												<td class="edit-content-cell">
+													22.02.1975 (37 лет)
+													<!-- попап для редактирования полей -->
+													<span class="edit-field-btn" tabindex="0" data-toggle="popover" data-placement="top" data-popover-content="#edit-field-2">
+														<i class="icon icon-pen-square"></i>
+													</span>
+													<div id="edit-field-2" style="display:none;">
+														<div class="popover-heading">Редактировать дату рождения</div>
+														<div class="popover-body">
+															<div class="input-group mb-3">
+																<input type="text" class="form-control" value="22.02.1975">
+																<div class="input-group-append">
+																	<button class="btn btn-outline-success" type="button">ОК</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- end попап для редактирования полей -->
+												</td>
+											</tr>
+											<tr>
+												<th>Телефон</th>
+												<td class="edit-content-cell">
+													+7 (123) 456 78 90
+													<a href="tel:+71234567890" class="phone-call">Позвонить</a>
+													<!-- попап для редактирования полей -->
+													<span class="edit-field-btn" tabindex="0" data-toggle="popover" data-placement="top" data-popover-content="#edit-field-3">
+														<i class="icon icon-pen-square"></i>
+													</span>
+													<div id="edit-field-3" style="display:none;">
+														<div class="popover-heading">Редактировать номер телефона</div>
+														<div class="popover-body">
+															<div class="input-group mb-3">
+																<input type="text" class="form-control" value="+71234567890">
+																<div class="input-group-append">
+																	<button class="btn btn-outline-success" type="button">ОК</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- end попап для редактирования полей -->
+												</td>
+											</tr>
+											<tr>
+												<th>Раб. телефон</th>
+												<td>
+													+7 (123) 456 78 90
+													<a href="tel:+71234567890" class="phone-call">Позвонить</a>
+												</td>
+											</tr>
+											<tr>
+												<th>E-mail</th>
+												<td>
+													<a href="mailto:jkfjkfjk@jf.hf">jkfjkfjk@jf.hf</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<button class="btn btn-primary btn-icon icon-times-octagon mx-auto d-block">В черный список</button>
+	
+									<hr class="my-4">
+	
+									<h6 class="subtitle-icon"><i class="icon icon-suitcase"></i> Похожие клиенты</h6>
+									<div class="vertical-scroll">
+										<table class="table borderless table-sm">
+											<thead>
+												<tr>
+													<th>ФИО</th>
+													<th>Совпадает</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Место работы</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#" class="badge-out">Сергейченко А.В.</a>
+													</td>
+													<td>Телефон</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+	
+									
+									<hr class="my-4">
+	
+									<h6 class="subtitle-icon"><i class="icon icon-suitcase"></i> Запросы в УБКИ</h6>
+									<div class="vertical-scroll">
+										<table class="table borderless table-sm">
+											<thead>
+												<tr>
+													<th>Номер</th>
+													<th>Дата</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="#">№1234567</a></td>
+													<td>01.01.2000</td>
+												</tr>
+												<tr>
+													<td><a href="#">№1234567</a></td>
+													<td>01.01.2000</td>
+												</tr>
+												<tr>
+													<td><a href="#">№1234567</a></td>
+													<td>01.01.2000</td>
+												</tr>
+												<tr>
+													<td><a href="#">№1234567</a></td>
+													<td>01.01.2000</td>
+												</tr>
+												<tr>
+													<td><a href="#">№1234567</a></td>
+													<td>01.01.2000</td>
+												</tr>
+												<tr>
+													<td><a href="#">№1234567</a></td>
+													<td>01.01.2000</td>
+												</tr>
+												<tr>
+													<td><a href="#">№1234567</a></td>
+													<td>01.01.2000</td>
+												</tr>
+												<tr>
+													<td><a href="#">№1234567</a></td>
+													<td>01.01.2000</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<button class="btn btn-primary mt-2 mx-auto d-block">Выполнить запрос</button>
+									<hr class="my-4 d-lg-none">
+								</div>
+	
+								<div class="col-lg-8 col-borrower-right">
+									<h6 class="subtitle-icon"><i class="icon icon-address-book"></i> Паспорт</h6>
+									<p>7492 849013 Выдан УВД г.Санкт-Петербург 27.03.1989</p>
+									<div class="pasport-wrap">
+										<div class="pasport">
+											<a href="./img/pasport1.jpg" class="pasport-img"><img src="./img/pasport1.jpg" alt=""></a>
+											<div class="pasport-f-name">паспорт1.jpg</div>
+										</div>
+										<div class="pasport">
+											<a href="./img/pasport2.jpg" class="pasport-img"><img src="./img/pasport2.jpg" alt=""></a>
+											<div class="pasport-f-name">паспорт2.jpg</div>
+										</div>
+										<div class="pasport">
+											<a href="./img/pasport2.jpg" class="pasport-img"><img src="./img/pasport2.jpg" alt=""></a>
+											<div class="pasport-f-name">паспорт2.jpg</div>
+										</div>
+									</div>
+									<p><b>Адрес регистрации:</b> Россия, г.Санкт-Петербург , ул. Войнова, д.13 кв. 238</p>
+									<p class="position-relative pr-5">
+										<b>Адрес проживания:</b> <span class="text-danger">Россия, г.Санкт-Петербург , ул. Войнова, д.13 кв. 238</span>
+										<span class="btn btn-sm btn-outline-dark" data-toggle="modal" data-target="#historyModal">
+											<i class="icon icon-history"></i>
+										</span>
+									</p>
+									<!-- Modal -->
+									<div class="modal fade" id="historyModal" tabindex="-1" role="dialog" aria-labelledby="historyModalLabel" aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h6 class="modal-title" id="historyModalLabel"><i class="icon icon-history"></i> История изменения данных</h6>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<table class="table-history">
+														<tr class="current">
+															<td>19.01.2018</td>
+															<td><i class="icon icon-home"></i></td>
+															<td>Россия, г.Санкт-Петербург , ул. Войнова, д.13 кв. 238</td>
+														</tr>
+														<tr>
+															<td>19.01.2018</td>
+															<td><i class="icon icon-home"></i></td>
+															<td>Россия, г.Санкт-Петербург , ул. Войнова, д.13 кв. 238</td>
+														</tr>
+														<tr>
+															<td>19.01.2018</td>
+															<td><i class="icon icon-home"></i></td>
+															<td>Россия, г.Санкт-Петербург , ул. Войнова, д.13 кв. 238</td>
+														</tr>
+														<tr>
+															<td>19.01.2018</td>
+															<td><i class="icon icon-home"></i></td>
+															<td>Россия, г.Санкт-Петербург , ул. Войнова, д.13 кв. 238</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+									<hr class="my-4">
+	
+									<h6 class="subtitle-icon"><i class="icon icon-users"></i> Семья</h6>
+									<table class="table borderless table-sm">
+										<tbody>
+											<tr>
+												<td><b>Тип</b></td>
+												<td>Холост</td>
+											</tr>
+											<tr>
+												<td><b>Дети (до 18 лет)</b></td>
+												<td>&mdash;</td>
+											</tr>
+											<tr>
+												<td><b>Лиц на содержании</b></td>
+												<td>&mdash;</td>
+											</tr>
+										</tbody>
+									</table>
+	
+									<hr class="my-4">
+	
+									<h6 class="subtitle-icon"><i class="icon icon-user"></i> Контактные лица</h6>
+									<div class="vertical-scroll">
+										<table class="table borderless table-sm">
+											<thead>
+												<tr>
+													<th>ФИО</th>
+													<th>Кем приходится</th>
+													<th>Телефон</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Григорьева Светлана Викторовна</td>
+													<td>Мать</td>
+													<td class="edit-content-cell">
+														+7 (123) 456 78 90
+														<a href="tel:+71234567890" class="phone-call">Позвонить</a>
+														<!-- попап для редактирования полей -->
+														<span class="edit-field-btn" tabindex="0" data-toggle="popover" data-placement="left" data-popover-content="#edit-field-4">
+															<i class="icon icon-pen-square"></i>
+														</span>
+														<div id="edit-field-4" style="display:none;">
+															<div class="popover-heading">Редактировать номер телефона</div>
+															<div class="popover-body">
+																<div class="input-group mb-3">
+																	<input type="text" class="form-control" value="+71234567890">
+																	<div class="input-group-append">
+																		<button class="btn btn-outline-success" type="button">ОК</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- end попап для редактирования полей -->
+													</td>
+												</tr>
+												<tr>
+													<td>Григорьева Светлана Викторовна</td>
+													<td>Мать</td>
+													<td class="edit-content-cell">
+														+7 (123) 456 78 90
+														<a href="tel:+71234567890" class="phone-call">Позвонить</a>
+														<!-- попап для редактирования полей -->
+														<span class="edit-field-btn" tabindex="0" data-toggle="popover" data-placement="left" data-popover-content="#edit-field-5">
+															<i class="icon icon-pen-square"></i>
+														</span>
+														<div id="edit-field-5" style="display:none;">
+															<div class="popover-heading">Редактировать номер телефона</div>
+															<div class="popover-body">
+																<div class="input-group mb-3">
+																	<input type="text" class="form-control" value="+71234567890">
+																	<div class="input-group-append">
+																		<button class="btn btn-outline-success" type="button">ОК</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- end попап для редактирования полей -->
+													</td>
+												</tr>
+												<tr>
+													<td>Григорьева Светлана Викторовна</td>
+													<td>Мать</td>
+													<td class="edit-content-cell">
+														+7 (123) 456 78 90
+														<a href="tel:+71234567890" class="phone-call">Позвонить</a>
+														<!-- попап для редактирования полей -->
+														<span class="edit-field-btn" tabindex="0" data-toggle="popover" data-placement="left" data-popover-content="#edit-field-6">
+															<i class="icon icon-pen-square"></i>
+														</span>
+														<div id="edit-field-6" style="display:none;">
+															<div class="popover-heading">Редактировать номер телефона</div>
+															<div class="popover-body">
+																<div class="input-group mb-3">
+																	<input type="text" class="form-control" value="+71234567890">
+																	<div class="input-group-append">
+																		<button class="btn btn-outline-success" type="button">ОК</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- end попап для редактирования полей -->
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<button class="btn btn-outline-dark btn-sm"><i class="icon icon-plus-circle"></i> Добавить</button>
+	
+									<hr class="my-4">
+	
+									<h6 class="subtitle-icon"><i class="icon icon-suitcase"></i> Работа</h6>
+									<table class="table borderless table-sm">
+										<tbody>
+											<tr>
+												<td><b>Занятость</b></td>
+												<td>Полная занятость</td>
+											</tr>
+											<tr>
+												<td><b>Должность</b></td>
+												<td>
+													Менеджер продаж (8 мес) <br>
+													40 000 р./мес
+												</td>
+											</tr>
+											<tr>
+												<td><b>Организация</b></td>
+												<td>
+													ЗАО Электросталь (нефтедобывающая компания)<br>
+													Москва, пр. Кутузова - 18, офис 318<br>
+													Валенков Анрей Иванович<br>
+													8 (812) 345-67-89
+												</td>
+											</tr>
+										</tbody>
+									</table>
+	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="col-12">
+					<h6>Кредиты ранее</h6>
+					<div class="collapse-wrap">
+						<div class="px-3 bg-light btn-collapse collapsed" data-toggle="collapse" data-target="#prevCredits">
+							&nbsp;
+						</div>
+						<div class="collapse order-collapse bg-light pb-4" id="prevCredits">
+							<div class="table-responsive pb-4">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th>Номер</th>
+											<th>Статус</th>
+											<th>Сумма, грн.</th>
+											<th>Срок, дней</th>
+											<th>Дата выдачи</th>
+											<th>Дата погашения</th>
+											<th>Оплачено тело займа, грн</th>
+											<th>Проценты займа, грн</th>
+											<th>Оплачено проценты займа, грн</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2222</td>
+											<td>Погашен</td>
+											<td>22 222</td>
+											<td>22</td>
+											<td>22.22.2222</td>
+											<td>22.22.2222</td>
+											<td>22 222</td>
+											<td>22 222</td>
+											<td>22 222</td>
+										</tr>
+										<tr>
+											<td>2222</td>
+											<td>Погашен</td>
+											<td>22 222</td>
+											<td>22</td>
+											<td>22.22.2222</td>
+											<td>22.22.2222</td>
+											<td>22 222</td>
+											<td>22 222</td>
+											<td>22 222</td>
+										</tr>
+										<tr>
+											<td>2222</td>
+											<td>Погашен</td>
+											<td>22 222</td>
+											<td>22</td>
+											<td>22.22.2222</td>
+											<td>22.22.2222</td>
+											<td>22 222</td>
+											<td>22 222</td>
+											<td>22 222</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="col-12">
+					<h6>Комментарии</h6>
+					<div class="collapse-wrap">
+						<div class="px-3 bg-light btn-collapse collapsed" data-toggle="collapse" data-target="#Comments">
+							&nbsp;
+						</div>
+
+						<div class="collapse order-collapse bg-light px-3" id="Comments">
+							<form class="mb-3">
+								<div class="form-group">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Комментарий">
+										<div class="input-group-append">
+											<button class="btn btn-primary" type="button">Добавить</button>
+										</div>
+									</div>
+									<div class="text-muted">
+										Осталось <span id="symbolsCounter">2000</span> символов
+									</div>
+								</div>
+							</form>
+							<div class="pb-3">
+								<!-- comment -->
+								<div class="comment">
+									<div class="comment-user">
+										<div class="comment-user-pic">
+											<img src="./img/user.png" alt="" class="rounded-circle">
+										</div>
+										<div class="comment-meta">
+											<div><b>Пушкин Александр</b></div>
+											<div><i>12.12.1221 12:21</i></div>
+										</div>
+									</div>
+									<div class="comment-text">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non tempore, temporibus tempora cupiditate quo perferendis perspiciatis vitae consequuntur distinctio cum ipsum corporis doloribus aliquam quis blanditiis, odit esse repellendus.Ut accusantium quis a ipsum saepe doloremque voluptates veritatis blanditiis corrupti aliquam! Provident fugiat placeat maiores fuga. Non saepe quasi ipsum quos qui, cumque vitae, quaerat rem officiis architecto dolorum?
+									</div>
+								</div>
+								<!-- comment -->
+								<div class="comment">
+									<div class="comment-user">
+										<div class="comment-user-pic">
+											<img src="./img/user.png" alt="" class="rounded-circle">
+										</div>
+										<div class="comment-meta">
+											<div><b>Пушкин Александр</b></div>
+											<div><i>12.12.1221 12:21</i></div>
+										</div>
+									</div>
+									<div class="comment-text">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non tempore, temporibus tempora cupiditate quo perferendis perspiciatis vitae consequuntur distinctio cum ipsum corporis doloribus aliquam quis blanditiis, odit esse repellendus.Ut accusantium quis a ipsum saepe doloremque voluptates veritatis blanditiis corrupti aliquam! Provident fugiat placeat maiores fuga. Non saepe quasi ipsum quos qui, cumque vitae, quaerat rem officiis architecto dolorum?
+									</div>
+								</div>
+								<!-- comment -->
+								<div class="comment">
+									<div class="comment-user">
+										<div class="comment-user-pic">
+											<img src="./img/user.png" alt="" class="rounded-circle">
+										</div>
+										<div class="comment-meta">
+											<div><b>Пушкин Александр</b></div>
+											<div><i>12.12.1221 12:21</i></div>
+										</div>
+									</div>
+									<div class="comment-text">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non tempore, temporibus tempora cupiditate quo perferendis perspiciatis vitae consequuntur distinctio cum ipsum corporis doloribus aliquam quis blanditiis, odit esse repellendus.Ut accusantium quis a ipsum saepe doloremque voluptates veritatis blanditiis corrupti aliquam! Provident fugiat placeat maiores fuga. Non saepe quasi ipsum quos qui, cumque vitae, quaerat rem officiis architecto dolorum?
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="col-12">
+					<h6>Документы</h6>
+					<div class="collapse-wrap">
+						<div class="px-3 bg-light btn-collapse collapsed" data-toggle="collapse" data-target="#docsCollapse">
+							&nbsp;
+						</div>
+						
+						<div id="docsCollapse" class="collapse order-collapse">
+							<div class="custom-input-wrap">
+								<b class="mr-4">Добавить новый скан</b>
+								<upload-file extensions="'.pdf, .doc, .docx, .xls, .xlsx'" url="'./server.php'"></upload-file>
+							</div>
+							<div class="table-responsive">
+								<table class="table table-hover ws-nw cell-center">
+									<tbody>
+										<tr>
+											<td>
+												<i class="icon file-icon icon-file-pdf"></i>
+												pdf file
+											</td>
+											<td>14.14.2014</td>
+											<td>Кредит на автомобиль</td>
+											<td class="text-right">
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-external-link"></i> Посмотреть
+												</a>
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-download"></i> Скачать
+												</a>
+											</td>
+										</tr>
+		
+										<tr>
+											<td>
+												<i class="icon file-icon icon-file-word"></i>
+												word file
+											</td>
+											<td>14.14.2014</td>
+											<td>Кредит на автомобиль</td>
+											<td class="text-right">
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-external-link"></i> Посмотреть
+												</a>
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-download"></i> Скачать
+												</a>
+											</td>
+										</tr>
+		
+										<tr>
+											<td>
+												<i class="icon file-icon icon-file-alt"></i>
+												other file
+											</td>
+											<td>14.14.2014</td>
+											<td>Кредит на автомобиль</td>
+											<td class="text-right">
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-external-link"></i> Посмотреть
+												</a>
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-download"></i> Скачать
+												</a>
+											</td>
+										</tr>
+										
+										<tr>
+											<td>
+												<i class="icon file-icon icon-file-pdf"></i>
+												Согласие банка.pdf
+											</td>
+											<td>14.14.2014</td>
+											<td>Кредит на автомобиль</td>
+											<td class="text-right">
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-external-link"></i> Посмотреть
+												</a>
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-download"></i> Скачать
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<h6>Сканы</h6>
+					<div class="collapse-wrap">
+						<div class="px-3 bg-light btn-collapse collapsed" data-toggle="collapse" data-target="#scansCollapse">
+							&nbsp;
+						</div>
+						
+						<div id="scansCollapse" class="collapse order-collapse">
+							<div class="custom-input-wrap">
+								<b class="mr-4">Добавить новый скан</b>
+								<upload-file extensions="'.jpg, .jpeg, .png'" url="'./server.php'"></upload-file>
+							</div>
+	
+							<div class="table-responsive">
+								<table class="table table-hover ws-nw cell-center">
+									<tbody>
+										<tr>
+											<td>
+												<i class="icon file-icon icon-paste"></i>
+												Паспорт 1
+											</td>
+											<td>14.14.2014</td>
+											<td class="text-right">
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-external-link"></i> Посмотреть
+												</a>
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-download"></i> Скачать
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<i class="icon file-icon icon-paste"></i>
+												Паспорт 1
+											</td>
+											<td>14.14.2014</td>
+											<td class="text-right">
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-external-link"></i> Посмотреть
+												</a>
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-download"></i> Скачать
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<i class="icon file-icon icon-paste"></i>
+												Паспорт 1
+											</td>
+											<td>14.14.2014</td>
+											<td class="text-right">
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-external-link"></i> Посмотреть
+												</a>
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-download"></i> Скачать
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<i class="icon file-icon icon-paste"></i>
+												Паспорт 1
+											</td>
+											<td>14.14.2014</td>
+											<td class="text-right">
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-external-link"></i> Посмотреть
+												</a>
+												<a href="#" class="btn btn-outline-dark btn-sm">
+													<i class="icon icon-download"></i> Скачать
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-auto">
+					<div class="text-secondary">Швидка Готівочка © 2018</div>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="text-secondary">
+						<i class="icon icon-envelope"></i> Обратная связь</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/angular.js"></script>
+	<script src="./js/order.js"></script>
+
+</body>
+
+</html>

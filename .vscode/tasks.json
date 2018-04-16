@@ -1,0 +1,12 @@
+// Sass configuration
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Sass Compile",
+			"type": "shell",
+			"command": "node-sass ./scss/bootstrap.scss ./css/css.css",
+			"group": "build"
+		}
+	]
+}

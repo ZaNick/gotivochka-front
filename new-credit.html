@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Shvidka New credit</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="navigation small-navbar">
+		<div class="logo-wrap">
+			<img src="./img/logo.svg" class="img-fluid" alt="">
+		</div>
+
+		<div class="menu">
+			<button id="btnMenu" class="btn-menu-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="menu-collapsed">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-chart-bar"></i>
+							</span>
+							<span class="menu-name">Статистика</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-inbox"></i>
+								<span class="badge badge-pill badge-light badge-menu">999</span>
+							</span>
+							<span class="menu-name" data-toggle="collapse" data-target="#collapseExample">Заявки
+								<span class="dropdown-toggle"></span>
+							</span>
+						</a>
+						<div class="collapse" id="collapseExample">
+							<ul class="sub-menu-list">
+								<li>
+									<a href="#">Список заявок</a>
+								</li>
+								<li>
+									<a href="#">Взять заявку</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-handshake"></i>
+							</span>
+							<span class="menu-name">Займы</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-credit-card"></i>
+							</span>
+							<span class="menu-name">Платежи</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-portrait"></i>
+							</span>
+							<span class="menu-name">Черный список</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-chart-pie"></i>
+							</span>
+							<span class="menu-name">Отчеты</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-briefcase"></i>
+							</span>
+							<span class="menu-name">Аудит</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-cog-1"></i>
+							</span>
+							<span class="menu-name">Управление</span>
+						</a>
+					</li>
+				</ul>
+	
+				<ul class="nav flex-column nav-bot">
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-info"></i>
+							</span>
+							<span class="menu-name">
+								<i class="icon icon-arrL"></i> На сайт</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="page-header">
+			<div class="header-info-wrap d-none d-lg-flex">
+				<div class="header-info-number show-second">
+					<span class="show-data">30</span>
+				</div>
+				<div class="header-info-text">
+					<div>Февраля</div>
+					<div class="text-pink">Четверг</div>
+				</div>
+			</div>
+
+			<div class="top-user-wrap">
+				<a href="#" class="user-pic-wrap" id="dropdownUserMenuButton">
+					<img src="./img/user.png" class="img-fluid rounded-circle" alt="">
+				</a>
+				<div id="dropdownUserMenu" class="d-none">
+					<div class="popover-header">
+						<div class="user-name">Дмитрий Вознесенский</div>
+						<div class="user-status">
+							<span class="indicator online"></span> Онлайн
+							<!-- <span class="indicator offline"></span> Оффлайн
+							<span class="indicator away"></span> Нет на месте
+							<span class="indicator dontdisturb"></span> Не беспокоить -->
+						</div>
+					</div>
+					<div class="popover-body">
+						<ul class="user-menu-nav">
+							<li><a href="#"><i class="icon icon-user"></i> Аккаунт</a></li>
+							<li><a href="#"><i class="icon icon icon-cog-1"></i> Настройки</a></li>
+							<li><a href="#"><i class="icon icon-power-off"></i> Выйти</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="login-wrap">
+					<div class="user-name">Дмитрий Вознесенский</div>
+					<a href="#" class="logout-link">Выйти</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class="text-left">Добавление кредитного продукта</h1>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="wizard">
+						<nav class="mb-5">
+							<ul class="nav">
+								<li class="nav-item">
+									<a class="active" id="step1-tab" data-toggle="tab" href="#step1" role="tab" aria-controls="step1" aria-selected="true">Информация</a>
+								</li>
+								<li class="nav-item">
+									<a id="step2-tab" data-toggle="tab" href="#step2" role="tab" aria-controls="step2" aria-selected="false">Ограничения</a>
+								</li>
+								<li class="nav-item">
+									<a id="step3-tab" data-toggle="tab" href="#step3" role="tab" aria-controls="step3" aria-selected="false">Документы</a>
+								</li>
+			
+							</ul>
+						</nav>
+						<div class="tab-content">
+							<div class="tab-pane fade show active" id="step1" role="tabpanel" aria-labelledby="step1-tab">	
+								<form name="step0" novalidate>
+									<div class="row">
+										<div class="col-12 col-sm-auto">
+											<h6>Название</h6>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<input type="text" class="form-control" required>
+											</div>
+											<div class="form-group">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" required>
+													<span class="custom-control-label">Активен</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-12 mb-5">
+											<h6>Условия</h6>
+											<div class="jumbotron-2 bg-grey-1">
+												<!-- form-row -->
+												<div class="form-row mb-4">
+													<div class="col-lg-3 col-filter-name">
+														<b>Сумма займов</b>
+													</div>
+													<div class="col-lg-8 form-inline">
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">от</span>
+															</div>
+															<input type="text" class="form-control" name="start" required>
+															<div class="input-group-prepend input-group-append">
+																<span class="input-group-text">до</span>
+															</div>
+															<input type="text" class="form-control" name="end" required>
+															<div class="input-group-append">
+																<span class="input-group-text">грн.</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- form-row -->
+												<div class="form-row mb-4">
+													<div class="col-lg-3 col-filter-name">
+														<b>Срок займов</b>
+													</div>
+													<div class="col-lg-9 form-inline">
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">от</span>
+															</div>
+															<input type="text" class="form-control" name="start" required>
+															<div class="input-group-prepend input-group-append">
+																<span class="input-group-text">до</span>
+															</div>
+															<input type="text" class="form-control" name="end" required>
+															<div class="input-group-append">
+																<span class="input-group-text">дней</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- form-row -->
+												<div class="form-row mb-4">
+													<div class="col-lg-3 col-filter-name">
+														<b>Пролонгация</b>
+													</div>
+													<div class="col-lg-9 form-inline">
+														<div class="form-group mr-4">
+															<label class="custom-control custom-radio">
+																<input type="radio" class="custom-control-input" name="prolongation" value="0">
+																<span class="custom-control-label">Авто</span>
+															</label>
+														</div>
+														<div class="form-group mr-4">
+															<label class="custom-control custom-radio">
+																<input type="radio" class="custom-control-input" name="prolongation" value="1">
+																<span class="custom-control-label">Разрешить</span>
+															</label>
+														</div>
+														<div class="form-group">
+															<label class="custom-control custom-radio">
+																<input type="radio" class="custom-control-input" name="prolongation" value="2">
+																<span class="custom-control-label">Не разрешать</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<!-- form-row -->
+												<div class="form-row mb-4">
+													<div class="col-lg-3 col-filter-name">
+														<b>Срок пролонгации</b>
+													</div>
+													<div class="col-lg-9 form-inline">
+														<div class="input-group">
+															<input type="text" class="form-control" name="end" required>
+															<div class="input-group-append">
+																<span class="input-group-text">дней</span>
+															</div>
+														</div>
+														<div class="text-secondary ml-3" data-toggle="tooltip" data-placement="top" title="" data-original-title="тултип пролонгация">
+															<i class="icon icon-info-circle h6"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-12">
+											<h6>Ставки</h6>
+											<div class="jumbotron-2 bg-grey-2">
+												<!-- form-row -->
+												<div class="form-row mb-4">
+													<div class="col-md-7 col-lg-5 col-xl-4 col-filter-name">
+														<b>Процентная ставка основного периода</b>
+													</div>
+													<div class="col-md-5 form-inline">
+														<div class="input-group">
+															<div class="input-range-wrap">
+																<input type="text" class="form-control" required>
+																<span class="text-secondary ml-3" data-toggle="tooltip" data-placement="top" title="" data-original-title="тултип Процентная ставка">
+																	<i class="icon icon-info-circle h6"></i>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- form-row -->
+												<div class="form-row mb-4">
+													<div class="col-md-7 col-lg-5 col-xl-4 col-filter-name">
+														<b>Процентная ставка при просрочке</b>
+													</div>
+													<div class="col-md-5 form-inline">
+														<div class="input-group">
+															<div class="input-range-wrap">
+																<input type="text" class="form-control" required>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- form-row -->
+												<div class="form-row mb-4">
+													<div class="col-md-7 col-lg-5 col-xl-4 col-filter-name">
+														<b>Штраф при просрочке</b>
+													</div>
+													<div class="col-md-5 form-inline">
+														<div class="input-group">
+															<div class="input-range-wrap">
+																<input type="text" class="form-control" required>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- form-row -->
+												<div class="form-row mb-4">
+													<div class="col-md-7 col-lg-5 col-xl-4 col-filter-name">
+														<b>Штрафная процентная ставка при просрочке</b>
+													</div>
+													<div class="col-md-5 form-inline">
+														<div class="input-group">
+															<div class="input-range-wrap">
+																<input type="text" class="form-control" required>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<!--tab-->
+							<div class="tab-pane fade" id="step2" role="tabpanel" aria-labelledby="step2-tab">
+								<div class="row">
+									<div class="col-12">
+										<div class="table-responsive">
+											<table class="table">
+												<thead>
+													<tr>
+														<th></th>
+														<th>Мин. кол-во закрытых кредитов</th>
+														<th>Сумма закрытых кредитов, ргн.</th>
+														<th>Доступен только в офисах</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tr>
+													<td>
+														<i class="icon icon-info"></i>
+													</td>
+													<td>не менее
+														<b class="pr-3 pl-3">3</b> не более
+														<b class="pr-3 pl-3">15</b>
+													</td>
+													<td>не менее
+														<b class="pr-3 pl-3">10 000</b> не более
+														<b class="pr-3 pl-3">100 000</b>
+													</td>
+													<td>Онлайн</td>
+													<td>
+														<a href="#" class="text-muted">
+															<i class="icon icon-trash-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<i class="icon icon-info"></i>
+													</td>
+													<td>не менее
+														<b class="pr-3 pl-3">3</b> не более
+														<b class="pr-3 pl-3">15</b>
+													</td>
+													<td>не менее
+														<b class="pr-3 pl-3">10 000</b> не более
+														<b class="pr-3 pl-3">100 000</b>
+													</td>
+													<td>Онлайн</td>
+													<td>
+														<a href="#" class="text-muted">
+															<i class="icon icon-trash-alt"></i>
+														</a>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="jumbotron-2 bg-grey-3">
+											<!-- form-row -->
+											<div class="form-row mb-4">
+												<div class="col-lg-5 col-filter-name">
+													<b>Мин. кол-во закрытых кредитов</b>
+												</div>
+												<div class="col-lg-6 d-inline-flex align-items-center nowrap">
+													<span class="mr-3">не менее</span>
+													<input type="text" class="form-control" name="start" required>
+													<span class="mx-3">не более</span>
+													<input type="text" class="form-control" name="end" required>
+												</div>
+											</div>
+											<!-- form-row -->
+											<div class="form-row mb-4">
+												<div class="col-lg-5 col-filter-name">
+													<b>Сумма закрытых кредитов, грн.</b>
+												</div>
+												<div class="col-lg-6 d-inline-flex align-items-center nowrap">
+													<span class="mr-3">не менее</span>
+													<input type="text" class="form-control" name="start" required>
+													<span class="mx-3">не более</span>
+													<input type="text" class="form-control" name="end" required>
+												</div>
+											</div>
+											<!-- form-row -->
+											<div class="form-row mb-4">
+												<div class="col-lg-5 col-filter-name">
+													<b>Доступен только в офисах</b>
+												</div>
+												<div class="col-lg-6">
+													<select class="custom-select mr-sm-2">
+														<option selected>Выберите</option>
+														<option value="1">One</option>
+														<option value="2">Two</option>
+														<option value="3">Three</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="d-flex justify-content-center">
+												<button class="btn btn-primary">
+													<i class="icon icon-plus-circle"></i>Добавить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--tab-->
+							<div class="tab-pane fade" id="step3" role="tabpanel" aria-labelledby="step3-tab">
+								<div class="row">
+									<div class="col-12">
+										<div class="table-responsive">
+											<table class="table">
+												<thead>
+													<tr>
+														<th></th>
+														<th>Тип операции</th>
+														<th>Документ</th>
+														<th>Обязательный</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tr>
+													<td>
+														<i class="icon icon-clipboard"></i>
+													</td>
+													<td>Заявка одобрена</td>
+													<td>Договор кредита</td>
+													<td><i class="text-primary icon icon-check"></i> Да</td>
+													<td>
+														<a href="#" class="text-muted">
+															<i class="icon icon-trash-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<i class="icon icon-clipboard"></i>
+													</td>
+													<td>Заявка одобрена</td>
+													<td>Договор кредита</td>
+													<td>Нет</td>
+													<td>
+														<a href="#" class="text-muted">
+															<i class="icon icon-trash-alt"></i>
+														</a>
+													</td>
+												</tr>
+											</table>
+										</div>
+										<div class="jumbotron-2 bg-grey-3">
+											<!-- form-row -->
+											<div class="form-row mb-4">
+												<div class="col-lg-3 col-filter-name">
+													<b>Тип операции</b>
+												</div>
+												<div class="col-lg-6">
+													<select class="custom-select mr-sm-2">
+														<option selected>Выберите</option>
+														<option value="1">One</option>
+														<option value="2">Two</option>
+														<option value="3">Three</option>
+													</select>
+												</div>
+											</div>
+											<!-- form-row -->
+											<div class="form-row mb-4">
+												<div class="col-lg-3 col-filter-name">
+													<b>Документ</b>
+												</div>
+												<div class="col-lg-6">
+													<select class="custom-select mr-sm-2">
+														<option selected>Выберите</option>
+														<option value="1">One</option>
+														<option value="2">Two</option>
+														<option value="3">Three</option>
+													</select>
+												</div>
+											</div>
+											<!-- form-row -->
+											<div class="form-row mb-4">
+												<div class="col-lg-3 col-filter-name">
+													<b>Обязательный</b>
+												</div>
+												<div class="col-lg-6">
+													<label class="custom-control custom-checkbox mb-0">
+														<input id="allSelected" type="checkbox" class="custom-control-input">
+														<span class="custom-control-label">Обязательный</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="d-flex justify-content-center">
+												<button class="btn btn-primary">
+													<i class="icon icon-plus-circle"></i>Добавить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row mt-5">
+							<div class="col-2 d-flex align-items-center">
+								<button class="btn btn-link" onclick="prevTab()">‹&nbsp;Вернуться</button>
+							</div>
+							<div class="col-8 d-flex justify-content-center">
+								<button class="btn btn-primary btn-icon icon-chevron-circle-right" onclick="nextTab()">Продолжить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-auto">
+					<div class="text-secondary">Швидка Готівочка © 2018</div>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="text-secondary">
+						<i class="icon icon-envelope"></i> Обратная связь</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/angular.js"></script>
+	<script src="./js/newCredit.js"></script>
+
+</body>
+
+</html>

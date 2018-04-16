@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Shvidka List</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/owl.carousel.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-datepicker3.min.css">
+	<link rel="stylesheet" href="./css/type.css">
+	<link rel="stylesheet" href="./css/menu.css">
+	<link rel="stylesheet" href="./css/dashboard.css">
+	<link rel="stylesheet" href="./css/icons.css">
+	<link rel="stylesheet" href="./css/forms.css">
+	<link rel="stylesheet" href="./css/newcredit.css"> -->
+</head>
+
+<body>
+	<div class="navigation small-navbar">
+		<div class="logo-wrap">
+			<img src="./img/logo.svg" class="img-fluid" alt="">
+		</div>
+
+		<div class="menu">
+			<button id="btnMenu" class="btn-menu-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="menu-collapsed">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-chart-bar"></i>
+							</span>
+							<span class="menu-name">Статистика</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-inbox"></i>
+								<span class="badge badge-pill badge-light badge-menu">999</span>
+							</span>
+							<span class="menu-name" data-toggle="collapse" data-target="#collapseExample">Заявки
+								<span class="dropdown-toggle"></span>
+							</span>
+						</a>
+						<div class="collapse" id="collapseExample">
+							<ul class="sub-menu-list">
+								<li>
+									<a href="#">Список заявок</a>
+								</li>
+								<li>
+									<a href="#">Взять заявку</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-handshake"></i>
+							</span>
+							<span class="menu-name">Займы</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-credit-card"></i>
+							</span>
+							<span class="menu-name">Платежи</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-portrait"></i>
+							</span>
+							<span class="menu-name">Черный список</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-chart-pie"></i>
+							</span>
+							<span class="menu-name">Отчеты</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-briefcase"></i>
+							</span>
+							<span class="menu-name">Аудит</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-cog-1"></i>
+							</span>
+							<span class="menu-name">Управление</span>
+						</a>
+					</li>
+				</ul>
+	
+				<ul class="nav flex-column nav-bot">
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<span class="menu-icon">
+								<i class="icon icon-info"></i>
+							</span>
+							<span class="menu-name">
+								<i class="icon icon-arrL"></i> На сайт</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="page-header">
+			<div class="header-info-wrap d-none d-xl-flex">
+				<div class="header-info-number">
+					<span class="show-data" data-stat-id="stat-1">30</span>
+					<span data-stat-id="stat-2">20</span>
+				</div>
+				<div class="header-info-text">
+					<div>обработанных заявок</div>
+					<div>
+						<span class="active" data-stat-nav="stat-1">за сегодня</span>
+						<span data-stat-nav="stat-2">за месяц</span>
+					</div>
+				</div>
+			</div>
+			<!--stats-->
+			<div class="header-info-wrap d-none d-xl-flex">
+				<div class="header-info-number">
+					<span class="show-data" data-stat-id="stat-3">30</span>
+					<span data-stat-id="stat-4">20</span>
+				</div>
+				<div class="header-info-text">
+					<div>обработанных заявок</div>
+					<div>
+						<span class="active" data-stat-nav="stat-3">за сегодня</span>
+						<span data-stat-nav="stat-4">за месяц</span>
+					</div>
+				</div>
+			</div>
+			<!--stats-->
+			<div class="header-info-wrap d-none d-xl-flex">
+				<div class="header-info-number">
+					<span class="show-data" data-stat-id="stat-5">30</span>
+					<span data-stat-id="stat-6">20</span>
+				</div>
+				<div class="header-info-text">
+					<div>обработанных заявок</div>
+					<div>
+						<span class="active" data-stat-nav="stat-5">за сегодня</span>
+						<span data-stat-nav="stat-6">за месяц</span>
+					</div>
+				</div>
+			</div>
+			<!--stats-->
+
+			<div class="top-user-wrap">
+				<a href="#" class="user-pic-wrap" id="dropdownUserMenuButton">
+					<img src="./img/user.png" class="img-fluid rounded-circle" alt="">
+				</a>
+				<div id="dropdownUserMenu" class="d-none">
+					<div class="popover-header">
+						<div class="user-name">Дмитрий Вознесенский</div>
+						<div class="user-status">
+							<span class="indicator online"></span> Онлайн
+							<!-- <span class="indicator offline"></span> Оффлайн
+							<span class="indicator away"></span> Нет на месте
+							<span class="indicator dontdisturb"></span> Не беспокоить -->
+						</div>
+					</div>
+					<div class="popover-body">
+						<ul class="user-menu-nav">
+							<li><a href="#"><i class="icon icon-user"></i> Аккаунт</a></li>
+							<li><a href="#"><i class="icon icon icon-cog-1"></i> Настройки</a></li>
+							<li><a href="#"><i class="icon icon-power-off"></i> Выйти</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="login-wrap">
+					<div class="user-name">Дмитрий Вознесенский</div>
+					<a href="#" class="logout-link">Выйти</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-wrap" ng-app="list" ng-controller="mainCtrl">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-left">Список заявок</h1>
+				</div>
+				<div class="col-12 mb-4">
+					<a href="#" class="order-link btn-sm-block" ng-click="searchPresets.all()" ng-class="{active: searchPresets.activePreset == 'all'}">Все <span>заявки</span></a>
+					<a href="#" class="order-link btn-sm-block" ng-click="searchPresets.onWait()" ng-class="{active: searchPresets.activePreset == 'onWait'}">Ожидают <span>решения</span></a>
+					<a href="#" class="order-link btn-sm-block" ng-click="searchPresets.onWait()" ng-class="{active: searchPresets.activePreset == 'onWait'}">Ожидают акцепт <span>договора</span></a>
+					<a href="#" class="order-link btn-sm-block" ng-click="searchPresets.onWait()" ng-class="{active: searchPresets.activePreset == 'onWait'}">Ожидают перевод <span>денег</span></a>
+					<a href="#" class="order-link btn-sm-block" ng-click="searchPresets.onWait()" ng-class="{active: searchPresets.activePreset == 'onWait'}">Ошибка отправки <span>денег</span></a>
+					<a href="#" class="order-link btn-sm-block" ng-click="searchPresets.declined()" ng-class="{active: searchPresets.activePreset == 'declined'}">Отклоненные <span>и отказанные</span></a>
+				</div>
+				<div class="col-12 mb-4">
+					<div id="filter" class="collapse-wrap">
+						<div class="px-3 bg-light btn-collapse collapsed" data-toggle="collapse" data-target="#filterForm" aria-expanded="false">
+							<b>Фильтр</b> <span id="filterCount" class="badge badge-pill badge-primary badge-filter">{{filterCount}}</span>
+							<!-- <svg class="collapse-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 5"><path fill="currentColor" d="M9.9,0.5L9.5,0.1C9.4,0,9.2,0,9.1,0.1L5,3.6L0.9,0.1C0.8,0,0.6,0,0.5,0.1L0.1,0.5C0,0.6,0,0.7,0.1,0.8l4.7,4.1 C4.9,5,5.1,5,5.2,4.9l4.7-4.1C10,0.7,10,0.6,9.9,0.5L9.9,0.5z"></path></svg> -->
+						</div>
+						<div id="filterForm" class="filter-form collapse">
+							<form>
+								<div class="px-3 py-4 bg-light filter-indicator">
+									<div class="form-row" ng-class="{'filtered': isNumber(filter.index)}">
+										<div class="col-md-4 col-filter-name">
+											<b>Номер заявки</b>
+										</div>
+										<div class="col-md-4 col-lg-3">
+											<input type="number" class="form-control form-control-sm" ng-model="filter.index">
+										</div>
+									</div>
+			
+									<div class="form-row" ng-class="{'filtered': filter.status[0]||filter.status[1]||filter.status[2]}">
+										<div class="col-md-4 col-filter-name">
+											<b>Статус</b>
+										</div>
+										<div class="col-md-8 form-inline">
+											<div class="custom-checkbox custom-control-inline">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" ng-model="filter.status[0]" ng-true-value="'Одобрен'">
+													<span class="custom-control-label">Одобрен</span>
+												</label>
+											</div>
+											<div class="custom-checkbox custom-control-inline">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" ng-model="filter.status[1]" ng-true-value="'На рассмотрении'">
+													<span class="custom-control-label">На рассмотрении</span>
+												</label>
+											</div>
+											<div class="custom-checkbox custom-control-inline">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" ng-model="filter.status[2]" ng-true-value="'Отказ'">
+													<span class="custom-control-label">Отказ</span>
+												</label>
+											</div>
+										</div>
+									</div>
+			
+									<div class="form-row" ng-class="{'filtered': filter.productId[0]||filter.productId[1]||filter.productId[2]||filter.productId[3]||filter.productId[4]}">
+										<div class="col-md-4 col-filter-name">
+											<b>Кредитный продукт</b>
+										</div>
+										<div class="col-md-8 form-inline">
+											<div class="custom-checkbox custom-control-inline">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" ng-model="filter.productId[0]" ng-true-value="1">
+													<span class="custom-control-label">Продукт 1</span>
+												</label>
+											</div>
+											<div class="custom-checkbox custom-control-inline">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" ng-model="filter.productId[1]" ng-true-value="2">
+													<span class="custom-control-label">Продукт 2</span>
+												</label>
+											</div>
+											<div class="custom-checkbox custom-control-inline">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" ng-model="filter.productId[2]" ng-true-value="3">
+													<span class="custom-control-label">Продукт 3</span>
+												</label>
+											</div>
+											<div class="custom-checkbox custom-control-inline">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" ng-model="filter.productId[3]" ng-true-value="4">
+													<span class="custom-control-label">Продукт 4</span>
+												</label>
+											</div>
+											<div class="custom-checkbox custom-control-inline">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" ng-model="filter.productId[4]" ng-true-value="5">
+													<span class="custom-control-label">Продукт 5</span>
+												</label>
+											</div>
+											
+										</div>
+									</div>
+			
+									<div class="form-row" ng-class="{'filtered': filter.FIO}">
+										<div class="col-md-4 col-filter-name">
+											<b>Фамилия заемщика</b>
+										</div>
+										<div class="col-md-8 col-lg-6 col-xl-5">
+											<input type="text" class="form-control form-control-sm" ng-model="filter.FIO">
+										</div>
+									</div>
+			
+									<div class="form-row" ng-class="{'filtered': dummyPasport}">
+										<div class="col-md-4 col-filter-name">
+											<b>Серия и номер паспорта</b>
+										</div>
+										<div class="col-md-8 col-lg-6 col-xl-5">
+											<input type="text" class="form-control form-control-sm" ng-model="dummyPasport">
+										</div>
+									</div>
+			
+									<div class="form-row" ng-class="{'filtered': date1[0] || date1[1]}">
+										<div class="col-md-4 col-filter-name">
+											<b>Дата подачи заявки</b>
+										</div>
+										<div class="col-md-8 col-lg-6 col-xl-5">
+											<div class="input-daterange input-group input-group-sm">
+												<div class="input-group-prepend">
+													<span class="input-group-text">с</span>
+												</div>
+												<input type="text" class="form-control" name="start" ng-model="date1[0]"/>
+												<div class="input-group-prepend input-group-append">
+													<span class="input-group-text">по</span>
+												</div>
+												<input type="text" class="form-control" name="end" ng-model="date1[1]"/>
+											</div>
+										</div>
+									</div>
+			
+									<div class="form-row" ng-class="{'filtered': date2[0] || date2[1]}">
+										<div class="col-md-4 col-filter-name">
+											<b>Дата выдачи</b>
+										</div>
+										<div class="col-md-8 col-lg-6 col-xl-5">
+											<div class="input-daterange input-group input-group-sm">
+												<div class="input-group-prepend">
+													<span class="input-group-text">с</span>
+												</div>
+												<input type="text" class="form-control" name="start" ng-model="date2[0]" />
+												<div class="input-group-prepend input-group-append">
+													<span class="input-group-text">по</span>
+												</div>
+												<input type="text" class="form-control" name="end" ng-model="date2[1]" />
+											</div>
+										</div>
+									</div>
+			
+									<div class="form-row" ng-class="{'filtered': date3[0] || date3[1]}">
+										<div class="col-md-4 col-filter-name">
+											<b>Срок займа</b>
+										</div>
+										<div class="col-md-8 col-lg-6 col-xl-5">
+											<div class="input-daterange input-group input-group-sm">
+												<div class="input-group-prepend">
+													<span class="input-group-text">с</span>
+												</div>
+												<input type="text" class="form-control" name="start" ng-model="date3[1]" />
+												<div class="input-group-prepend input-group-append">
+													<span class="input-group-text">по</span>
+												</div>
+												<input type="text" class="form-control" name="end" ng-model="date3[1]" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="text-center bg-dark py-4">
+									<button type="submit" ng-click="filteringList()" class="btn btn-warning btn-sm">Фильтровать</button>
+									<button type="button" ng-click="resetFilter()" class="btn btn-link btn-sm text-secondary">Сбросить фильтр</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12">
+					<div class="table-responsive">
+						<table id="ListResult" class="table table-sm table-hover nowrap">
+							<thead>
+								<tr>
+									<th></th>
+									<th>
+										Номер
+										<div class="sort-wrap">
+											<a href="#" class="btn-sort asc" ng-click="sortBy('index', true)" ng-class="headerClass('index', true) ? 'active' : ''"></a>
+											<a href="#" class="btn-sort desc" ng-click="sortBy('index', false)" ng-class="headerClass('index', false) ? 'active' : ''"></a>
+										</div>
+									</th>
+									<th>
+										Дата подачи
+										<div class="sort-wrap">
+											<a href="#" class="btn-sort asc" ng-click="sortBy('regDate', true)" ng-class="headerClass('regDate', true) ? 'active' : ''"></a>
+											<a href="#" class="btn-sort desc" ng-click="sortBy('regDate', false)" ng-class="headerClass('regDate', false) ? 'active' : ''"></a>
+										</div>
+									</th>
+									<th>
+										Фио заемщика
+										<div class="sort-wrap">
+											<a href="#" class="btn-sort asc" ng-click="sortBy('FIO', true)" ng-class="headerClass('FIO', true) ? 'active' : ''"></a>
+											<a href="#" class="btn-sort desc" ng-click="sortBy('FIO', false)" ng-class="headerClass('FIO', false) ? 'active' : ''"></a>
+										</div>
+									</th>
+									<th>
+										Кредит.продукт
+										<div class="sort-wrap">
+											<a href="#" class="btn-sort asc" ng-click="sortBy('productId', true)" ng-class="headerClass('productId', true) ? 'active' : ''"></a>
+											<a href="#" class="btn-sort desc" ng-click="sortBy('productId', false)" ng-class="headerClass('productId', false) ? 'active' : ''"></a>
+										</div>
+									</th>
+									<th>
+										Отделение
+										<div class="sort-wrap">
+											<a href="#" class="btn-sort asc" ng-click="sortBy('department', true)" ng-class="headerClass('department', true) ? 'active' : ''"></a>
+											<a href="#" class="btn-sort desc" ng-click="sortBy('department', false)" ng-class="headerClass('department', false) ? 'active' : ''"></a>
+										</div>
+									</th>
+									<th>
+										Сумма, грн.
+										<div class="sort-wrap">
+											<a href="#" class="btn-sort asc" ng-click="sortBy('amount', true)" ng-class="headerClass('amount', true) ? 'active' : ''"></a>
+											<a href="#" class="btn-sort desc" ng-click="sortBy('amount', false)" ng-class="headerClass('amount', false) ? 'active' : ''"></a>
+										</div>
+									</th>
+									<th>
+										Срок, дней
+										<div class="sort-wrap">
+											<a href="#" class="btn-sort asc" ng-click="sortBy('dayCount', true)" ng-class="headerClass('dayCount', true) ? 'active' : ''"></a>
+											<a href="#" class="btn-sort desc" ng-click="sortBy('dayCount', false)" ng-class="headerClass('dayCount', false) ? 'active' : ''"></a>
+										</div>
+									</th>
+									<th>
+										Статус
+										<div class="sort-wrap">
+											<a href="#" class="btn-sort asc" ng-click="sortBy('status', true)" ng-class="headerClass('status', true) ? 'active' : ''"></a>
+											<a href="#" class="btn-sort desc" ng-click="sortBy('status', false)" ng-class="headerClass('status', false) ? 'active' : ''"></a>
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="credit in filteredList | orderBy:propertyName:reverse | limitTo:pager.pageSize:pager.getCurrentPage()">
+									<td>
+										<label class="custom-control custom-checkbox">
+											<input type="checkbox" class="custom-control-input" ng-model="credit.active" ng-change="checkSelected()">
+											<span class="custom-control-label"></span>
+										</label>
+									</td>
+									<td>{{credit.index}}</td>
+									<td>{{credit.regDate}}</td>
+									<td>{{credit.FIO}}</td>
+									<td>Продукт {{credit.productId}}</td>
+									<td>{{credit.department}}</td>
+									<td>{{credit.amount}}</td>
+									<td>{{credit.dayCount}}</td>
+									<td>{{credit.status}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<label class="custom-control custom-checkbox mt-3 mt-md-0">
+						<input id="allSelected" type="checkbox" class="custom-control-input" ng-model="allSelected" ng-change="toggleAll()">
+						<span class="custom-control-label">Выбрать все</span>
+					</label>
+
+					<button href="#" class="btn btn-primary btn-icon icon-pen-alt">Изменить статус</button>
+					<button href="#" class="btn btn-primary btn-icon icon-share">Выгрузить в Excel</button>
+					<button href="#" class="btn btn-primary btn-icon icon-shield-check">Назначить верификатора</button>
+
+					<hr class="mt-4 mb-4">
+
+					<!-- <div class="alert-wrap">
+						<div class="alert alert-warning" role="alert">
+							Выбраны все заявки на этой странице. Выбрать все отфильтрованные (120 шт)? <button class="btn btn-purple btn-sm ml-3">Выбрать</button>
+						</div>
+						<div class="alert alert-warning-2" role="alert">
+							<i class="icon icon-check"></i> Выбраны все отфильтрованные заявки (120 шт) <button class="btn btn-purple-outline btn-sm ml-3">Отменить</button>
+						</div>
+					</div> -->
+
+					<nav class="mt-4">
+						<ul ng-if="pager.getTotalPages() > 1" class="pagination justify-content-center">
+							<li class="page-item" ng-if="pager.currentPage !== 1">
+								<button ng-click="pager.setPage(1)" class="page-link">&laquo;</button>
+							</li>
+							<li class="page-item" ng-if="pager.currentPage !== 1">
+								<button ng-click="pager.setPage(pager.currentPage - 1)" class="page-link">&lsaquo;</button>
+							</li>
+							<li class="page-item" ng-repeat="page in pager.pagesList()" ng-class="{active:pager.currentPage === page}">
+								<button ng-click="pager.setPage(page)" class="page-link">{{page}}</button>
+							</li>
+							<li class="page-item" ng-if="pager.currentPage !== pager.getTotalPages()">
+								<button ng-click="pager.setPage(pager.currentPage + 1)" class="page-link">&rsaquo;</button>
+							</li>
+							<li class="page-item" ng-if="pager.currentPage !== pager.getTotalPages()">
+								<button ng-click="pager.setPage(pager.getTotalPages())" class="page-link">&raquo;</button>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-auto">
+					<div class="text-secondary">Швидка Готівочка © 2018</div>
+				</div>
+				<div class="col-auto">
+					<a href="#" class="text-secondary">
+						<i class="icon-envelope"></i> Обратная связь</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/bootstrap-datepicker.min.js"></script>
+	<script src="./js/angular.js"></script>
+	<script src="./js/list.js"></script>
+
+</body>
+
+</html>

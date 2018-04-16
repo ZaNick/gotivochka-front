@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot');
+    src: url('../font/fontello.eot#iefix') format('embedded-opentype'), url('../font/fontello.woff2') format('woff2'), url('../font/fontello.woff') format('woff'), url('../font/fontello.ttf') format('truetype'), url('../font/fontello.svg#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.icon:before {
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	line-height: 1em;
+	margin-right: .2em;
+	margin-left: .2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	// margin-left: .2rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-cog-1:before{content: '\e800'}
+.icon-chart-pie-1:before{content: '\e801'}
+.icon-user-1:before{content: '\e802'}
+.icon-user:before{content: '\f007'}
+.icon-check:before{content: '\f00c'}
+.icon-times:before{content: '\f00d'}
+.icon-power-off:before{content: '\f011'}
+.icon-cog:before{content: '\f013'}
+.icon-home:before{content: '\f015'}
+.icon-clock:before{content: '\f017'}
+.icon-download:before{content: '\f019'}
+.icon-inbox:before{content: '\f01c'}
+.icon-list-alt:before{content: '\f022'}
+.icon-edit:before{content: '\f044'}
+.icon-plus-circle:before{content: '\f055'}
+.icon-times-circle:before{content: '\f057'}
+.icon-info-circle:before{content: '\f05a'}
+.icon-share:before{content: '\f064'}
+.icon-comment:before{content: '\f075'}
+.icon-chart-bar:before{content: '\f080'}
+.icon-external-link:before{content: '\f08e'}
+.icon-credit-card:before{content: '\f09d'}
+.icon-briefcase:before{content: '\f0b1'}
+.icon-users:before{content: '\f0c0'}
+.icon-envelope:before{content: '\f0e0'}
+.icon-undo:before{content: '\f0e2'}
+.icon-paste:before{content: '\f0ea'}
+.icon-suitcase:before{content: '\f0f2'}
+.icon-chevron-circle-left:before{content: '\f137'}
+.icon-chevron-circle-right:before{content: '\f138'}
+.icon-pen-square:before{content: '\f14b'}
+.icon-file-alt:before{content: '\f15c'}
+.icon-file-pdf:before{content: '\f1c1'}
+.icon-file-word:before{content: '\f1c2'}
+.icon-history:before{content: '\f1da'}
+.icon-chart-pie:before{content: '\f200'}
+.icon-street-view:before{content: '\f21d'}
+.icon-user-plus:before{content: '\f234'}
+.icon-balance-scale:before{content: '\f24e'}
+.icon-handshake:before{content: '\f2b5'}
+.icon-address-book:before{content: '\f2b9'}
+.icon-trash-alt:before{content: '\f2ed'}
+.icon-times-octagon:before{content: '\f2f0'}
+.icon-shield-check:before{content: '\f2f7'}
+.icon-pen-alt:before{content: '\f305'}
+.icon-clipboard:before{content: '\f328'}
+.icon-portrait:before{content: '\f3e0'}
+
+.file-icon {
+	font-size: 1.5rem;
+	vertical-align: middle;
+	color: #a8a8a8;
+}
